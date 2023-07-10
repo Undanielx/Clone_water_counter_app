@@ -14,6 +14,9 @@ class _IntervalProgressBarState extends State<IntervalProgressBar> {
     return Row(
       children: [
         _bar(),
+        const SizedBox(
+          width: 8,
+        ),
         _label(),
       ],
     );
@@ -22,25 +25,26 @@ class _IntervalProgressBarState extends State<IntervalProgressBar> {
 Widget _bar(){
   return Column(
     children: [
-      _interval(customColor: const Color.fromARGB(255, 0, 55, 166)),    
+      
+      _interval(customColor: const Color.fromARGB(255, 66, 144, 255)),    
         _separator(),
-      _interval(customColor: const Color.fromARGB(255, 0, 130, 166)),    
+      _interval(customColor: const Color.fromARGB(255, 94, 173, 167)),    
         _separator(),
-       _interval(customColor: const Color.fromARGB(255, 0, 166, 22)),    
+       _interval(customColor: const Color.fromARGB(255, 118, 188, 116)),    
         _separator(),
-      _interval(customColor: const Color.fromARGB(255, 0, 255, 34)),    
+      _interval(customColor: const Color.fromARGB(255, 145, 186, 62)),    
         _separator(),
-      _interval(customColor: const Color.fromARGB(255, 162, 255, 0)),    
+      _interval(customColor: const Color.fromARGB(255, 169, 183, 60)),    
         _separator(),
-      _interval(customColor: const Color.fromARGB(255, 255, 247, 0)),    
+      _interval(customColor: const Color.fromARGB(255, 192, 181, 60)),    
         _separator(),
-      _interval(customColor:  const Color.fromARGB(255, 235, 205, 12)),    
+      _interval(customColor:  const Color.fromARGB(255, 230, 190, 64)),    
         _separator(),
-           _interval(customColor: const Color.fromARGB(255, 255, 158, 2)),
+           _interval(customColor: const Color.fromARGB(255, 237, 169, 59)),
        _separator(),
-       _interval(customColor: const Color.fromARGB(255, 167, 106, 10)),
+       _interval(customColor: const Color.fromARGB(255, 235, 138, 60)),
        _separator(),
-      _interval(customColor: const Color.fromARGB(255, 255, 0, 0)),
+      _interval(customColor: const Color.fromARGB(255, 229, 95, 72)),
       _separator(),
     ]
   );
@@ -48,8 +52,8 @@ Widget _bar(){
 
 Widget _interval({required Color customColor }){
   return SizedBox(
-    width: 22.0,
-    height: 3.0,
+    width: 15.0,
+    height: 3.8,
     child: DecoratedBox(
       decoration: BoxDecoration(
         color: customColor,
@@ -60,13 +64,20 @@ Widget _interval({required Color customColor }){
 
 Widget _separator(){
   return const SizedBox(
-    height: 3,
+    height: 2.2,
   );
 }
   Widget _label(){
-    return Text(
-      '1.0',
-      style: Theme.of(context).textTheme.headlineSmall,
+    return Column(
+      children: [
+        const SizedBox(
+          height: 30.0,
+        ),
+        Text(
+          '1.0',
+          style: Theme.of(context).textTheme.headlineSmall,
+        ),
+      ],
     );
   }
 }

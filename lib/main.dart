@@ -18,6 +18,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.black,
         primaryColor: Colors.purple,
+      appBarTheme: const AppBarTheme(
+        color: Colors.black,
+      ),
         textTheme: 
          const TextTheme(
           headlineSmall: TextStyle(
@@ -34,7 +37,7 @@ class MyApp extends StatelessWidget {
          ),
          elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.cyan,
+            backgroundColor: const Color.fromARGB(255, 115, 8, 173),
             foregroundColor: Colors.white,
           ) 
           ), 
