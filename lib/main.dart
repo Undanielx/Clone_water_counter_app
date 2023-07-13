@@ -17,34 +17,38 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.black,
-        primaryColor: Colors.purple,
-      appBarTheme: const AppBarTheme(
-        color: Colors.black,
-      ),
+        primaryColor: Colors.indigo,
+        appBarTheme: const AppBarTheme(
+          color: Colors.black,
+        ),
         textTheme: 
-         const TextTheme(
+        const TextTheme(
           headlineSmall: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold),
           bodyMedium: TextStyle(
-            color: Color.fromARGB(255, 137, 186, 243),
+            color: Color.fromARGB(255, 76, 169, 228),
+            fontSize: 12,
+            fontWeight: FontWeight.bold,
           ),
           bodySmall: TextStyle(
-            color: Colors.white,
+            color: Colors.white, 
             fontSize: 12,
             fontWeight: FontWeight.bold
-          ),
-         ),
-         elevatedButtonTheme: ElevatedButtonThemeData(
+            ),
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: const Color.fromARGB(255, 115, 8, 173),
+            backgroundColor: const Color.fromARGB(255, 68, 154, 243),
             foregroundColor: Colors.white,
-          ) 
-          ), 
+            textStyle: const TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
         useMaterial3: true,
       ),
       home: const StartScreen(),
     );
   }
 }
-
